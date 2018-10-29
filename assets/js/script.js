@@ -8,37 +8,37 @@ $(".project-text-container").hover(
 
 $(".eran-img-3-text").hover(
     function () {
-        $("#text-box-0").removeClass("text-0-opacity");
+        $("#text-box-0").addClass("text-black-bold");
     }, function () {
-        $("#text-box-0").addClass("text-0-opacity");
+        $("#text-box-0").removeClass("text-black-bold");
     }
 );
 $(".eran-img-3").hover(
     function () {
-        $("#text-box-0").removeClass("text-0-opacity");
+        $("#text-box-0").addClass("text-black-bold");
     }, function () {
-        $("#text-box-0").addClass("text-0-opacity");
+        $("#text-box-0").removeClass("text-black-bold");
     }
 );
 $(".eran-img-5").hover(
     function () {
-        $("#text-box-1").removeClass("text-0-opacity");
+        $("#text-box-1").addClass("text-black-bold");
     }, function () {
-        $("#text-box-1").addClass("text-0-opacity");
+        $("#text-box-1").removeClass("text-black-bold");
     }
 );
 $(".eran-img-6").hover(
     function () {
-        $("#text-box-2").removeClass("text-0-opacity");
+        $("#text-box-2").addClass("text-black-bold");
     }, function () {
-        $("#text-box-2").addClass("text-0-opacity");
+        $("#text-box-2").removeClass("text-black-bold");
     }
 );
 $(".eran-img-7").hover(
     function () {
-        $("#text-box-3").removeClass("text-0-opacity");
+        $("#text-box-3").addClass("text-black-bold");
     }, function () {
-        $("#text-box-3").addClass("text-0-opacity");
+        $("#text-box-3").removeClass("text-black-bold");
     }
 );
 
@@ -68,6 +68,35 @@ $(".eran-img-7").click(function () {
     }, 1000);
 });
 
+$("#icon-design").hover(
+    function () {
+        $(this).attr("src", "assets/images/design-color.png");
+    }, function () {
+        $(this).attr("src", "assets/images/design.png");
+    }
+);
+$("#icon-code").hover(
+    function () {
+        $(this).attr("src", "assets/images/code-color.png");
+    }, function () {
+        $(this).attr("src", "assets/images/code.png");
+    }
+);
+$("#icon-communicate").hover(
+    function () {
+        $(this).attr("src", "assets/images/communicate-color.png");
+    }, function () {
+        $(this).attr("src", "assets/images/communicate.png");
+    }
+);
+$("#icon-passion").hover(
+    function () {
+        $(this).attr("src", "assets/images/passion-color.png");
+    }, function () {
+        $(this).attr("src", "assets/images/passion.png");
+    }
+);
+
 $(".project-text-container").hover(
     function () {
         $(".eran-img-1").attr("src", "assets/images/1.gif");
@@ -75,6 +104,7 @@ $(".project-text-container").hover(
         $(".eran-img-1").attr("src", "assets/images/1.png");
     }
 );
+
 $("#contact").hover(
     function () {
         $(".eran-img-1").attr("src", "assets/images/1-2.png");
@@ -82,3 +112,11 @@ $("#contact").hover(
         $(".eran-img-1").attr("src", "assets/images/1.png");
     }
 );
+
+$(window).scroll(function () {
+    if ($(this).scrollTop()) {
+        $('.scroll-to-top').stop(true, true).fadeIn();
+    } else {
+        $('.scroll-to-top').stop(true, true).fadeOut();
+    }
+});

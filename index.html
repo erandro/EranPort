@@ -8,7 +8,9 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Stylish Portfolio - Start Bootstrap Template</title>
+  <title>Eran Dromy Portfolio</title>
+
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
   <!-- Bootstrap Core CSS -->
   <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -40,7 +42,7 @@
   <div class="eran-img-container">
     <img src="assets/images/1.png" alt="eran" class="eran-img-1">
     <img src="assets/images/2.gif" alt="eran" class="eran-img-2">
-    <div id="text-box-0" class="text-0-opacity">
+    <div id="text-box-0">
       <h4 class="eran-img-3-text">Contact</h4>
     </div>
     <img src="assets/images/3.png" alt="eran" class="eran-img-3">
@@ -48,19 +50,27 @@
     <img src="assets/images/5.png" alt="eran" class="eran-img-5">
     <img src="assets/images/6.png" alt="eran" class="eran-img-6">
     <img src="assets/images/7.png" alt="eran" class="eran-img-7">
-    <div id="text-box-1" class="text-0-opacity">
+    <div id="text-box-1">
       <h4>Projects</h4>
     </div>
-    <div id="text-box-2" class="text-0-opacity">
+    <div id="text-box-2">
       <h4>Skills</h4>
     </div>
-    <div id="text-box-3" class="text-0-opacity">
+    <div id="text-box-3">
       <h4>About</h4>
     </div>
   </div>
 
+  <!-- scroll down -->
+  <div class="scroll-down-container">
+    <I class="scroll-down bottom"></I>
+  </div>
+
   <!-- Right Side -->
   <div class="info">
+
+    <div class="space-between-for640-to360"></div>
+
     <!-- About -->
     <h3 data-aos="fade-up" id="about">
       Hi! I'm Eran (pronounced like "Aaron"), a web developer from Chicago.
@@ -82,7 +92,7 @@
     <h2 data-aos="fade-up" id="skills">Skills</h2>
     <div class="skills">
       <div data-aos="fade-up" class="skill-container">
-        <img src="assets\images\design.png" alt="Design Icon" class="skill-icon">
+        <img src="assets\images\design.png" alt="Design Icon" class="skill-icon" id="icon-design">
         <div class="skill-text">
           <h4>Design</h4>
           <h5>
@@ -101,7 +111,7 @@
         </div>
       </div>
       <div data-aos="fade-up" class="skill-container">
-        <img src="assets\images\code.png" alt="Code Icon" class="skill-icon">
+        <img src="assets\images\code.png" alt="Code Icon" class="skill-icon" id="icon-code">
         <div class="skill-text">
           <h4>Code</h4>
           <h5>
@@ -117,13 +127,19 @@
             <img src="assets\images\express.png" alt="Express Icon" class="small-icon">
             <img src="assets\images\react.png" alt="React Icon" class="small-icon">
             <img src="assets\images\mongodb.png" alt="Mongodb Icon" class="small-icon">
+            <img src="assets\images\mongoose.png" alt="GitHub Icon" class="small-icon">
+            <img src="assets\images\sql.png" alt="GitHub Icon" class="small-icon">
+            <img src="assets\images\mysql.png" alt="GitHub Icon" class="small-icon">
+            <img src="assets\images\sequelize.png" alt="GitHub Icon" class="small-icon">
+            <img src="assets\images\firebase.png" alt="GitHub Icon" class="small-icon">
+            <img src="assets\images\python.png" alt="GitHub Icon" class="small-icon">
             <img src="assets\images\heroku.png" alt="Heroku Icon" class="small-icon">
-            <img src="assets\images\github.png" alt="GitHub Icon" class="small-icon">
+            <img src="assets\images\github.png" alt="Heroku Icon" class="small-icon">
           </div>
         </div>
       </div>
       <div data-aos="fade-up" class="skill-container">
-        <img src="assets\images\communicate.png" alt="Communicate Icon" class="skill-icon">
+        <img src="assets\images\communicate.png" alt="Communicate Icon" class="skill-icon" id="icon-communicate">
         <div class="skill-text">
           <h4>Communicate</h4>
           <h5>
@@ -136,7 +152,7 @@
         </div>
       </div>
       <div data-aos="fade-up" class="skill-container">
-        <img src="assets\images\passion.png" alt="Passion Icon" class="skill-icon">
+        <img src="assets\images\passion.png" alt="Passion Icon" class="skill-icon" id="icon-passion">
         <div class="skill-text">
           <h4>Passion</h4>
           <h5>
@@ -153,54 +169,64 @@
     <!-- Projects -->
     <h2 data-aos="fade-up" id="projects">Projects</h2>
     <div class="projects">
+
       <div data-aos="fade-up" data-aos-delay="50" class="project-container">
         <div class="project-text-container text-0-opacity">
-          <h4>Anime Guessing Game</h4>
+          <h4><a class="text-white" href="https://erandro.github.io/Word-Guess-Game/" target="_blank">Anime Guessing
+              Game</a></h4>
         </div>
         <img src="assets\images\portfolio-1.jpg" alt="img1" class="project-img">
       </div>
+
       <div data-aos="fade-up" data-aos-delay="250" class="project-container">
         <div class="project-text-container text-0-opacity">
-          <h4>Star Wars RPG</h4>
+          <h4><a class="text-white" href="https://erandro.github.io/unit-4-game/" target="_blank">Star Wars RPG</a></h4>
         </div>
         <img src="assets\images\portfolio-2.jpg" alt="img2" class="project-img">
       </div>
+
       <div data-aos="fade-up" data-aos-delay="450" class="project-container">
         <div class="project-text-container text-0-opacity">
-          <h4>Burger Code</h4>
+          <h4><a class="text-white" href="https://nameless-beach-42412.herokuapp.com/" target="_blank">Burger Code</a></h4>
         </div>
         <img src="assets\images\portfolio-3.jpg" alt="img3" class="project-img">
       </div>
+
       <div data-aos="fade-up" data-aos-delay="50" class="project-container">
         <div class="project-text-container text-0-opacity">
-          <h4>Appvanture</h4>
+          <h4><a class="text-white" href="https://xintingyu0828.github.io/groupproject-1/" target="_blank">Appvanture</a></h4>
         </div>
         <img src="assets\images\portfolio-4.jpg" alt="img4" class="project-img">
       </div>
+
       <div data-aos="fade-up" data-aos-delay="250" class="project-container">
         <div class="project-text-container text-0-opacity">
-          <h4>LingoBits</h4>
+          <h4><a class="text-white" href="https://safe-shelf-29082.herokuapp.com/" target="_blank">LingoBits</a></h4>
         </div>
         <img src="assets\images\portfolio-5.jpg" alt="img5" class="project-img">
       </div>
+
       <div data-aos="fade-up" data-aos-delay="450" class="project-container">
         <div class="project-text-container text-0-opacity">
-          <h4>Rate this</h4>
+          <h4><a class="text-white" href="https://secret-beyond-63612.herokuapp.com/" target="_blank">Rate this</a></h4>
         </div>
         <img src="assets\images\portfolio-6.jpg" alt="img6" class="project-img">
       </div>
+
       <div data-aos="fade-up" data-aos-delay="50" class="project-container">
         <div class="project-text-container text-0-opacity">
-          <h4>Click Game</h4>
+          <h4><a class="text-white" href="https://afternoon-meadow-85631.herokuapp.com/" target="_blank">Click Game</a></h4>
         </div>
         <img src="assets\images\portfolio-7.jpg" alt="img6" class="project-img">
       </div>
+
       <div data-aos="fade-up" data-aos-delay="250" class="project-container">
         <div class="project-text-container text-0-opacity">
-          <h4>Raise The Bar</h4>
+          <h4><a class="text-white" href="https://protected-cove-88281.herokuapp.com/" target="_blank">Raise The Bar</a></h4>
         </div>
         <img src="assets\images\portfolio-8.jpg" alt="img6" class="project-img">
       </div>
+
     </div>
 
     <div class="space-between"></div>
@@ -216,9 +242,9 @@
   </div>
 
   <!-- Scroll to Top Button-->
-  <!-- <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
-    <i class="fas fa-angle-up"></i>
-  </a> -->
+  <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
+    ^
+  </a>
 
   <!-- aos -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
