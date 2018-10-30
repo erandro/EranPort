@@ -473,7 +473,7 @@ h1 {
   }
   h5 {
     font-size: 13px;
-    font-size: 3vw;
+    font-size: 4vw;
     line-height: 180%;
   }
 
@@ -564,9 +564,10 @@ h1 {
               transform: translate(0, 0); } }
 
   .skill-icon {
-    height: 4rem;
-    width: 4rem;
+    height: 10vw;
+    width: 10vw;
     margin: 0 10px 0 0;
+    align-self: flex-start;
   }
   .small-icon {
     width: 10vw;
