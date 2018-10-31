@@ -574,14 +574,14 @@ h1 {
     height: 10vw;
   }
   .project-container {
-    width: 25vw;
+    width: 35vw;
   }
   .project-img{
-    width: 25vw;
+    width: 35vw;
   }
   .project-text-container {
-    width: 25vw;
-    height: 25vw;
+    width: 35vw;
+    height: 35vw;
   }
 
   .space-between-for640-to360 {
