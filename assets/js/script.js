@@ -105,7 +105,7 @@ $(".project-text-container").hover(
     }
 );
 
-$("#contact").hover(
+$(".smile").hover(
     function () {
         $(".eran-img-1").attr("src", "assets/images/1-2.png");
     }, function () {
