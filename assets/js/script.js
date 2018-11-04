@@ -144,6 +144,12 @@ $("#modalId").click(function () {
     modelLinkLl.attr("href", "");
     modelLinkGh.attr("href", "");
 });
+$("#modal-link-ll").click(function () {
+    window.open(modelLinkLl.attr("href"), '_blank');
+});
+$("#modal-link-gh").click(function () {
+    window.open(modelLinkGh.attr("href"), '_blank');
+});
 
 $(window).scroll(function () {
     if ($(this).scrollTop()) {
