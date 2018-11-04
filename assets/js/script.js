@@ -113,6 +113,38 @@ $(".smile").hover(
     }
 );
 
+var modal = $("#modalId");
+var modelImg = $("#modal-img");
+var modalTitle = $("#modal-title");
+var modelText = $("#modal-text");
+var modelTech = $("#modal-tech");
+var modelLinkLl = $("#modal-link-ll");
+var modelLinkGh = $("#modal-link-gh");
+
+function techIcomMaker(target, iconString) {
+    iconString.split(" ").forEach(icomName => {
+        target.append(`<img src="assets\\images\\${icomName}.png" alt=${icomName} class="modal-tech-icon">`)
+    });
+}
+$(".project-container").click(function () {
+    modelImg.attr("src", $(this).attr("data-img"));
+    modalTitle.append($(this).attr("data-title"));
+    modelText.append($(this).attr("data-text"));
+    techIcomMaker(modelTech, $(this).attr("data-tech"))
+    modelLinkLl.attr("href", $(this).attr("data-link-ll"));
+    modelLinkGh.attr("href", $(this).attr("data-link-gh"));
+    modal.css("display", "flex");
+});
+$("#modalId").click(function () {
+    modal.css("display", "none");
+    modelImg.attr("src", "");
+    modalTitle.text("");
+    modelText.text("");
+    modelTech.empty();
+    modelLinkLl.attr("href", "");
+    modelLinkGh.attr("href", "");
+});
+
 $(window).scroll(function () {
     if ($(this).scrollTop()) {
         $('.scroll-to-top').stop(true, true).fadeIn();
