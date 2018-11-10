@@ -266,9 +266,9 @@ h1 {
   margin-bottom: 4vw;
 }
 .skill-icon {
-  margin: 10px;
-  height: 7vw;
   width: 7vw;
+  height: 7vw;
+  margin: 10px;
   align-self: center;
   -webkit-box-shadow: 0 3px 3px 0 rgba(0,0,0,.1);
   box-shadow: 0 3px 3px 0 rgba(0,0,0,.1);
@@ -494,8 +494,8 @@ h1 {
   }
 
   .skill-icon {
-    height: 9vw;
     width: 9vw;
+    height: 9vw;
   }
   .small-icon {
     width: 3.5vw;
@@ -522,8 +522,8 @@ h1 {
 @media (max-width: 768px) {
 
   .skill-icon {
-    height: 5vw;
     width: 5vw;
+    height: 5vw;
   }
   .small-icon {
     width: 3vw;
@@ -663,8 +663,8 @@ h1 {
               transform: translate(0, 0); } }
 
   .skill-icon {
-    height: 10vw;
     width: 10vw;
+    height: 10vw;
     margin: 0 10px 0 0;
     align-self: flex-start;
   }
