@@ -1,17 +1,11 @@
-$(".scroll-down-container").click(function () {
+// Scroll down arrow:
+$("div.scroll-down-container").on("click", ".bottom", function () {
     $('html, body').animate({
         scrollTop: $("#about").offset().top
     }, 1000);
 });
 
-$(".project-text-container").hover(
-    function () {
-        $(this).removeClass("text-0-opacity");
-    }, function () {
-        $(this).addClass("text-0-opacity");
-    }
-);
-
+// Left images hovers:
 $(".eran-img-3-text").hover(
     function () {
         $("#text-box-0").addClass("text-black-bold");
@@ -48,47 +42,49 @@ $(".eran-img-7").hover(
     }
 );
 
-$(".eran-img-3-text").click(function () {
+// Left images clicks:
+$("div#text-box-0").on("click", ".eran-img-3-text", function () {
     $('html, body').animate({
         scrollTop: $("#contact").offset().top
     }, 1000);
 });
-$(".eran-img-3").click(function () {
+$("div.eran-img-container").on("click", ".eran-img-3", function () {
     $('html, body').animate({
         scrollTop: $("#contact").offset().top
     }, 1000);
 });
-$("#text-box-1").click(function () {
+$("div.eran-img-container").on("click", "#text-box-1", function () {
     $('html, body').animate({
         scrollTop: $("#projects").offset().top
     }, 1000);
 });
-$(".eran-img-5").click(function () {
+$("div.eran-img-container").on("click", ".eran-img-5", function () {
     $('html, body').animate({
         scrollTop: $("#projects").offset().top
     }, 1000);
 });
-$("#text-box-2").click(function () {
+$("div.eran-img-container").on("click", "#text-box-2", function () {
     $('html, body').animate({
         scrollTop: $("#skills").offset().top
     }, 1000);
 });
-$(".eran-img-6").click(function () {
+$("div.eran-img-container").on("click", ".eran-img-6", function () {
     $('html, body').animate({
         scrollTop: $("#skills").offset().top
     }, 1000);
 });
-$("#text-box-3").click(function () {
+$("div.eran-img-container").on("click", "#text-box-3", function () {
     $('html, body').animate({
         scrollTop: $("#about").offset().top
     }, 1000);
 });
-$(".eran-img-7").click(function () {
+$("div.eran-img-container").on("click", ".eran-img-7", function () {
     $('html, body').animate({
         scrollTop: $("#about").offset().top
     }, 1000);
 });
 
+// Skill icon hovers:
 $("#icon-design").hover(
     function () {
         $(this).attr("src", "assets/images/design-color.png");
@@ -118,6 +114,14 @@ $("#icon-passion").hover(
     }
 );
 
+// Projects icon hover:
+$(".project-text-container").hover(
+    function () {
+        $(this).removeClass("text-0-opacity");
+    }, function () {
+        $(this).addClass("text-0-opacity");
+    }
+);
 $(".project-text-container").hover(
     function () {
         $(".eran-img-1").attr("src", "assets/images/1.gif");
@@ -126,6 +130,7 @@ $(".project-text-container").hover(
     }
 );
 
+// Contact Me hover:
 $(".smile").hover(
     function () {
         $(".eran-img-1").attr("src", "assets/images/1-2.png");
@@ -134,6 +139,7 @@ $(".smile").hover(
     }
 );
 
+// Project clicks:
 var modal = $("#modalId");
 var modelImg = $("#modal-img");
 var modalTitle = $("#modal-title");
@@ -147,7 +153,7 @@ function techIcomMaker(target, iconString) {
         target.append(`<img src="assets\\images\\${icomName}.png" alt=${icomName} class="modal-tech-icon">`)
     });
 }
-$(".project-container").click(function () {
+$("div.projects").on("click", ".project-container", function () {
     modelImg.attr("src", $(this).attr("data-img"));
     modalTitle.append($(this).attr("data-title"));
     modelText.append($(this).attr("data-text"));
@@ -165,13 +171,14 @@ $("#modalId").click(function () {
     modelLinkLl.attr("href", "");
     modelLinkGh.attr("href", "");
 });
-$("#modal-link-ll").click(function () {
+$("div#modal-link-container").on("click", "#modal-link-ll", function () {
     window.open(modelLinkLl.attr("href"), '_blank');
 });
-$("#modal-link-gh").click(function () {
+$("div#modal-link-container").on("click", "#modal-link-gh", function () {
     window.open(modelLinkGh.attr("href"), '_blank');
 });
 
+// Scroll up arrow:
 $(window).scroll(function () {
     if ($(this).scrollTop()) {
         $('.scroll-to-top').stop(true, true).fadeIn();
