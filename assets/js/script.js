@@ -1,3 +1,9 @@
+$(".scroll-down-container").click(function () {
+    $('html, body').animate({
+        scrollTop: $("#about").offset().top
+    }, 1000);
+});
+
 $(".project-text-container").hover(
     function () {
         $(this).removeClass("text-0-opacity");
