@@ -145,21 +145,38 @@ var modelImg = $("#modal-img");
 var modalTitle = $("#modal-title");
 var modelText = $("#modal-text");
 var modelTech = $("#modal-tech");
-var modelLinkLl = $("#modal-link-ll");
-var modelLinkGh = $("#modal-link-gh");
+var modalLinkContainer = $("#modal-link-container");
 
 function techIcomMaker(target, iconString) {
     iconString.split(" ").forEach(icomName => {
         target.append(`<img src="assets\\images\\${icomName}.png" alt=${icomName} class="modal-tech-icon">`)
     });
 }
+function linkAdd(ll, ghl, vlc, vl){
+    if (ll !== "none"){
+        modalLinkContainer.append(`<a href="${ll}" target="_blank" class="modal-link-ll"><img src="assets\\images\\link.png" alt="Link Icon" class="modal-small-icon"></a>`);
+    }
+    if (ghl !== "none"){
+        modalLinkContainer.append(`<a href="${ghl}" target="_blank" class="modal-link-gh"><img src="assets\\images\\github.png" alt="GitHub Icon" class="modal-small-icon"></a>`);
+    }
+    if (vlc !== "0"){
+        vl.split(" ").forEach(link => {
+            modalLinkContainer.append(`<a href="${link}" target="_blank" class="modal-link-v"><img src="assets\\images\\video.png" alt="Video Icon" class="modal-small-icon"></a>`);
+        });
+    }
+}
 $("div.projects").on("click", ".project-container", function () {
     modelImg.attr("src", $(this).attr("data-img"));
     modalTitle.append($(this).attr("data-title"));
     modelText.append($(this).attr("data-text"));
     techIcomMaker(modelTech, $(this).attr("data-tech"))
-    modelLinkLl.attr("href", $(this).attr("data-link-ll"));
-    modelLinkGh.attr("href", $(this).attr("data-link-gh"));
+    
+    var liveLink = $(this).attr("data-link-ll");
+    var gitHubLink = $(this).attr("data-link-gh");
+    var videoLinkCount = $(this).attr("data-link-vc");
+    var videoLink = $(this).attr("data-link-v");
+    linkAdd(liveLink, gitHubLink, videoLinkCount, videoLink);
+
     modal.css("display", "flex");
 });
 $("#modalId").click(function () {
@@ -168,14 +185,16 @@ $("#modalId").click(function () {
     modalTitle.text("");
     modelText.text("");
     modelTech.empty();
-    modelLinkLl.attr("href", "");
-    modelLinkGh.attr("href", "");
+    modalLinkContainer.children().remove();
 });
 $("div#modal-link-container").on("click", "#modal-link-ll", function () {
-    window.open(modelLinkLl.attr("href"), '_blank');
+    window.open($(this).attr("href"), '_blank');
 });
 $("div#modal-link-container").on("click", "#modal-link-gh", function () {
-    window.open(modelLinkGh.attr("href"), '_blank');
+    window.open($(this).attr("href"), '_blank');
+});
+$("div#modal-link-container").on("click", "#modal-link-gh", function () {
+    window.open($(this).attr("href"), '_blank');
 });
 
 // Scroll up arrow:

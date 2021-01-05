@@ -327,6 +327,12 @@ h1 {
   flex-wrap: wrap;
   justify-content: space-around;
 }
+.project-oneLine{
+  width: 35vw;
+  position: relative;
+  text-align: start;
+  margin: 0 0 2vw 0;
+}
 .project-container {
   width: 15vw;
   position: relative;
@@ -690,6 +696,9 @@ h1 {
   }
   .project-container {
     width: 35vw;
+  }
+  .project-oneLine{
+    width: 74vw;
   }
   .project-img{
     width: 35vw;
