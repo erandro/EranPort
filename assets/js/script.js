@@ -152,14 +152,14 @@ function techIcomMaker(target, iconString) {
         target.append(`<img src="assets\\images\\${icomName}.png" alt=${icomName} class="modal-tech-icon">`)
     });
 }
-function linkAdd(ll, ghl, vlc, vl){
-    if (ll !== "none"){
+function linkAdd(ll, ghl, vlc, vl) {
+    if (ll !== "none") {
         modalLinkContainer.append(`<a href="${ll}" target="_blank" class="modal-link-ll"><img src="assets\\images\\link.png" alt="Link Icon" class="modal-small-icon"></a>`);
     }
-    if (ghl !== "none"){
+    if (ghl !== "none") {
         modalLinkContainer.append(`<a href="${ghl}" target="_blank" class="modal-link-gh"><img src="assets\\images\\github.png" alt="GitHub Icon" class="modal-small-icon"></a>`);
     }
-    if (vlc !== "0"){
+    if (vlc !== "0") {
         vl.split(" ").forEach(link => {
             modalLinkContainer.append(`<a href="${link}" target="_blank" class="modal-link-v"><img src="assets\\images\\video.png" alt="Video Icon" class="modal-small-icon"></a>`);
         });
@@ -170,7 +170,7 @@ $("div.projects").on("click", ".project-container", function () {
     modalTitle.append($(this).attr("data-title"));
     modelText.append($(this).attr("data-text"));
     techIcomMaker(modelTech, $(this).attr("data-tech"))
-    
+
     var liveLink = $(this).attr("data-link-ll");
     var gitHubLink = $(this).attr("data-link-gh");
     var videoLinkCount = $(this).attr("data-link-vc");
